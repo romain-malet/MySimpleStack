@@ -20,26 +20,32 @@ public class SimpleStackImpl implements SimpleStack
 
     @java.lang.Override
     public boolean isEmpty() {
-        return false;
+        return items.isEmpty();
     }
 
     @java.lang.Override
     public int getSize() {
-        return 0;
+        return items.size();
     }
 
     @java.lang.Override
     public void push(Item item) {
-
+        items.push(item);
     }
 
     @java.lang.Override
     public Item peek() throws EmptyStackException {
-        return null;
+        if (items.isEmpty())
+            throw new EmptyStackException();
+        else
+            return items.peek();
     }
 
     @java.lang.Override
     public Item pop() throws EmptyStackException {
-        return null;
+        if (items.isEmpty())
+            throw new EmptyStackException();
+        else
+            return items.pop();
     }
 }
