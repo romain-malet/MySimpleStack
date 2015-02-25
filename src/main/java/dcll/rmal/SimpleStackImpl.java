@@ -7,8 +7,7 @@ import java.util.Stack;
  * Hello world!
  *
  */
-public class SimpleStackImpl implements SimpleStack
-{
+public class SimpleStackImpl implements SimpleStack {
 
     private Stack<Item> items;
     private int size;
@@ -35,17 +34,21 @@ public class SimpleStackImpl implements SimpleStack
 
     @java.lang.Override
     public Item peek() throws EmptyStackException {
-        if (items.isEmpty())
+        if (items.isEmpty()) {
             throw new EmptyStackException();
-        else
+        }
+        else {
             return items.peek();
+        }
     }
 
     @java.lang.Override
     public Item pop() throws EmptyStackException {
-        if (items.isEmpty())
+        if (items.isEmpty()) {
             throw new EmptyStackException();
-        else
+        }
+        else {
             return items.pop();
+        }
     }
 }
